@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dirt Tier Perks - Server Home</title>
+    <style>
+        /* Maintain the homepage's theme for consistency */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('homeback.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Back to Home Button styling */
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #1e3a8a;
+            color: white;
+            border: 2px solid #3b82f6;
+            padding: 10px 20px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .back-btn:hover {
+            background-color: #3b82f6;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Chart styling in a professional table format */
+        .chart-container {
+            margin-top: 40px;
+            width: 100%;
+            max-width: 900px;
+            background-color: #1e293b;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 1rem;
+        }
+
+        th, td {
+            text-align: center;
+            padding: 15px;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            background-color: #0f172a;
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        /* Payment section styling */
+        .payment-section {
+            margin-top: 50px;
+            text-align: center;
+            background-color: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 0 8px 166px rgba(0,0,0,0.5);
+            border: 1px solid #334155;
+        }
+
+        .payment-text {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .qr-code {
+            max-width: 200px;
+            height: auto;
+            border: 5px solid #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <button class="back-btn" onclick="window.location.href='index.html'">Back to Home</button>
+
+    <h1>Dirt Tier Perks</h1>
+
+    <div class="chart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>make a team</th>
+                    <th>stuff per day</th>
+                    <th>sell house on real money</th>
+                    <th>sell items on auction house on real money</th>
+                    <th>discount to buy something</th>
+                    <th>house protection</th>
+                    <th>come for leader election</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>✓</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="payment-section">
+        <p class="payment-text">To purchase this tier: 100 Rs</p>
+        <img src="image_1.png" alt="Payment QR Code" class="qr-code">
+        <h1>7003443114@upi</h1>    
+</div>
+
+</body>
+</html>
