@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Home</title>
+    <style>
+        /* Dark Blue Theme & Background Image Setup */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* The dark blue color mixed with your homeback image */
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('homeback.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Three-Dot Menu Styling */
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+        }
+
+        .three-dots {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 0;
+        }
+
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #1e293b;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            border-radius: 8px;
+            overflow: hidden;
+            z-index: 1;
+            border: 1px solid #334155;
+        }
+
+        .dropdown-menu a, .dropdown-menu .info-block {
+            color: white;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+            border-bottom: 1px solid #334155;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #3b82f6;
+        }
+
+        .info-block {
+            background-color: #0f172a;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .info-block span {
+            color: #60a5fa;
+            font-weight: bold;
+        }
+
+        /* Main Content & Buttons */
+        .main-content {
+            margin-top: 15vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+            margin-bottom: 40px;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .tier-btn {
+            background-color: #1e3a8a;
+            color: white;
+            border: 2px solid #3b82f6;
+            padding: 20px 40px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .tier-btn:hover {
+            background-color: #3b82f6;
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="menu-container">
+        <button class="three-dots" onclick="toggleMenu()">&#8942;</button>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="https://discord.gg/mJzEZZgP" target="_blank">Join our Discord</a>
+            
+            <div class="info-block">
+                <span>Minecraft Server IP:</span><br>
+                Java: nugeotsmp1.minefort.com<br>
+                Bedrock Port: 19132
+            </div>
+            
+            <a href="https://www.youtube.com/@sir-0101" target="_blank">YouTube Channel</a>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1>Welcome to the Server</h1>
+        <h1>Let's Know What you want to buy</h1>
+        
+        <div class="options-grid">
+            <button class="tier-btn" onclick="window.location.href='dirt.html'">1. Dirt</button>
+            <button class="tier-btn" onclick="window.location.href='stone.html'">2. Stone</button>
+            <button class="tier-btn" onclick="window.location.href='iron.html'">3. Iron</button>
+            <button class="tier-btn" onclick="window.location.href='diamond.html'">4. Diamond</button>
+            <button class="tier-btn" onclick="window.location.href='netherite.html'">5. Netherite</button>
+            <button class="tier-btn" onclick="window.location.href='bedrock.html'">6. Bedrock</button>
+        </div>
+    </main>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("dropdownMenu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+
+        // Closes the menu automatically if you click anywhere else on the screen
+        window.onclick = function(event) {
+            if (!event.target.matches('.three-dots')) {
+                var dropdowns = document.getElementsByClassName("dropdown-menu");
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.style.display === "block") {
+                        openDropdown.style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
